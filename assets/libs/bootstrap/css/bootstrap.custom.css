@@ -1,0 +1,8 @@
+@import './bootstrap.css';
+
+/* override bootstrap  */
+.form-control,
+.form-select,
+.btn {
+    font-size: 1.6rem;
+}
