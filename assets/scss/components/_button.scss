@@ -1,0 +1,42 @@
+@mixin button($type) {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 1rem;
+    user-select: none;
+    cursor: pointer;
+
+    @if($type=='primary') {
+        color: $light;
+        background-color: $primary;
+
+        &:hover {
+            background-color: lighten($primary, 30%);
+        }
+    }
+
+    @else if($type=='secondary') {
+        font-weight: bold;
+        color: $dark;
+        background-color: $white;
+
+        &:hover {
+            color: $primary;
+            background-color: darken($white, 10%);
+        }
+    }
+
+    @else if($type=='confirm') {
+        font-weight: bold;
+        color: $light;
+        background-color: $secondary;
+
+        &:hover {
+            color: $light;
+            background-color: lighten($secondary, 10%);
+        }
+    }
+}

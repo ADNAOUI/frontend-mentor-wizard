@@ -1,0 +1,27 @@
+input.form-control {
+    @include input-datas()
+}
+
+.button-primary {
+    @include button("primary")
+}
+
+.button-secondary {
+    @include button("secondary");
+}
+
+.button-confirm {
+    @include button("confirm");
+}
+
+.box {
+    border: 1px solid $dark;
+    border-radius: 1rem;
+
+    &:hover,
+    &:has(input:checked) {
+        background-color: $light;
+        border-color: $primary;
+        border-radius: 1rem;
+    }
+}

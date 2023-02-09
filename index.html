@@ -14,133 +14,153 @@
 </head>
 
 <body>
-
   <main class='container'>
     <div class="row wrapper">
-      <div class="col-4">
+      <div class="col-3">
         <!-- Sidebar start -->
-        <nav class='wizard-navigation'>
-          <ul class='wizard-navigation__list'>
-            <li class="wizard-navigation__list__item active">
-              <p class='wizard-navigation__list__item__number'>
-                <span>1</span>
-              </p>
-              <p>
-                <small>Step 1</small>
-                <span>Your info</span>
-              </p>
-            </li>
-            <li class="wizard-navigation__list__item">
-              <p class='wizard-navigation__list__item__number'>
-                <span>2</span>
-              </p>
-              <p>
-                <small>Step 2</small>
-                <span>Select plan</span>
-              </p>
-            </li>
-            <li class="wizard-navigation__list__item">
-              <p class='wizard-navigation__list__item__number'>
-                <span>3</span>
-              </p>
-              <p>
-                <small>Step 3</small>
-                <span>Add-ons</span>
-              </p>
-            </li>
-            <li class="wizard-navigation__list__item">
-              <p class='wizard-navigation__list__item__number'>
-                <span>4</span>
-              </p>
-              <p>
-                <small>Step 1</small>
-                <span>Summary</span>
-              </p>
-            </li>
-          </ul>
+        <aside>
+          <nav class='wizard-navigation'>
+            <div>
+              <img src="./assets/images/bg-sidebar-desktop.svg" alt="">
+            </div>
+            <ul class='wizard-navigation__list'>
+              <li class="wizard-navigation__list__item active">
+                <p class='wizard-navigation__list__item__number'>
+                  <span>1</span>
+                </p>
+                <p>
+                  <small>Step 1</small>
+                  <span>Your info</span>
+                </p>
+              </li>
+              <li class="wizard-navigation__list__item">
+                <p class='wizard-navigation__list__item__number'>
+                  <span>2</span>
+                </p>
+                <p>
+                  <small>Step 2</small>
+                  <span>Select plan</span>
+                </p>
+              </li>
+              <li class="wizard-navigation__list__item">
+                <p class='wizard-navigation__list__item__number'>
+                  <span>3</span>
+                </p>
+                <p>
+                  <small>Step 3</small>
+                  <span>Add-ons</span>
+                </p>
+              </li>
+              <li class="wizard-navigation__list__item">
+                <p class='wizard-navigation__list__item__number'>
+                  <span>4</span>
+                </p>
+                <p>
+                  <small>Step 1</small>
+                  <span>Summary</span>
+                </p>
+              </li>
+            </ul>
+          </nav>
+
+        </aside>
+          <!-- Sidebar end -->
           <!-- Sidebar end -->
         </nav>
+        <!-- Sidebar end -->
+        </nav>
       </div>
-      <div class="col-8">
-        <form class='wizard-form'>
+      <div class="col-7 offset-1">
+        <form class='wizard-form needs-validation' novalidate>
           <section class='wizard-step active'>
-            <h2>Personal info</h2>
-            <span>Please provide your name, email address, and phone number.</span>
-
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" class="form-control" placeholder='e.g. Stephen King'
-                aria-describedby="name area">
+            <div class="wizard-step-header">
+              <h2>Personal info</h2>
+              <span>Please provide your name, email address, and phone number.</span>
             </div>
+            <div class="wizard-step-content">
+              <div class="mb-4">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" placeholder='e.g. Stephen King'
+                  aria-describedby="name area" required>
+              </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder='e.g. stephenking@lorem.com'
-                aria-describedby="email help">
-            </div>
+              <div class="mb-4">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder='e.g. stephenking@lorem.com'
+                  aria-describedby="email help" required>
+              </div>
 
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" id="phone" class="form-control" placeholder='e.g. +1 234 567 890'
-                aria-describedby="tel">
+              <div class="mb-4 has-validation">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder='e.g. +1 234 567 890'
+                  aria-describedby="tel" required>
+              </div>
             </div>
-            <button type="button" class="btn btn-primary button-action next">Next Step</button>
+            <div class="wizard-step-footer justify-content-end">
+              <button type="button" class="button-primary button-action next">Next Step</button>
+              <button type="submit" class="button-primary">submit</button>
+            </div>
+          </section>
+          <section id="selectYourPlan" class='wizard-step'>
+            <div class="wizard-step-header">
+              <h2>Select your plan</h2>
+              <span> You have the option of monthly or yearly billing.</span>
+            </div>
+            <div class="wizard-step-content">
+              <div class='row'>
+                <div class="col-3">
+                  <div class="form-check box">
+                    <input class="form-check-input" type="radio" name="selectYourPlan" id="arcade" value='9' required>
+                    <label class="form-check-label w-100" for="arcade">
+                      <img src="./assets/images/icon-arcade.svg" class="" alt="" width='40' height='40'>
+                      <b>Arcade</b>
+                      <small>$9/mo</small>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="form-check box">
+                    <input class="form-check-input" type="radio" name="selectYourPlan" id="advanced" value='12' required>
+                    <label class="form-check-label w-100" for="advanced">
+                      <img src="./assets/images/icon-advanced.svg" class="" alt="" width='40' height='40'>
+                      <b>Advanced</b>
+                      <small>$12/mo</small>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="form-check box">
+                    <input class="form-check-input" type="radio" name="selectYourPlan" id="pro" value='15' required>
+                    <label class="form-check-label w-100" for="pro">
+                      <img src="./assets/images/icon-pro.svg" class="" alt="" width='40' height='40'>
+                      <b>Pro</b>
+                      <small>$15/mo</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" required>
+                <label class="form-check-label" for="flexSwitchCheckDefault">
+                  <span>Monthly</span>
+                  <span>Yearly</span>
+                </label>
+              </div>
+            </div>
+            <div class="wizard-step-footer">
+              <button type="button" class="button-secondary button-action">Go Back</button>
+              <button type="button" class="button-primary button-action next">Next Step</button>
+            </div>
           </section>
           <section class='wizard-step'>
-            <h2>Select your plan</h2>
-            <span> You have the option of monthly or yearly billing.</span>
-
-            <div>
-              <div class="mb-3">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="arcade" id="arcade" value='9'>
-                  <label class="form-check-label" for="arcade">
-                    <img src="./assets/images/icon-arcade.svg" class="" alt="" width='50' height='50'>
-                    <b>Arcade</b>
-                    <small>$9/mo</small>
-                  </label>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="advanced" id="advanced" value='12'>
-                  <label class="form-check-label" for="advanced">
-                    <img src="./assets/images/icon-advanced.svg" class="" alt="" width='50' height='50'>
-                    <b>Advanced</b>
-                    <small>$12/mo</small>
-                  </label>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="pro" id="pro" value='15'>
-                  <label class="form-check-label" for="pro">
-                    <img src="./assets/images/icon-pro.svg" class="" alt="" width='50' height='50'>
-                    <b>Pro</b>
-                    <small>$15/mo</small>
-                  </label>
-                </div>
-              </div>
+            <div class="wizard-step-header">
+              <h2>Pick add-ons</h2>
+              <span>Add-ons help enhance your gaming experience.</span>
             </div>
-
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-              <label class="form-check-label" for="flexSwitchCheckDefault">
-                <span>Monthly</span>
-                <span>Yearly</span>
-              </label>
-            </div>
-
-            <button type="button" class="btn btn-primary button-action">Go Back</button>
-            <button type="button" class="btn btn-primary button-action next">Next Step</button>
-          </section>
-          <section class='wizard-step'>
-            <h2>Pick add-ons</h2>
-            <span>Add-ons help enhance your gaming experience.</span>
-
-            <div>
+            <div class='wizard-step-content'>
               <div class="pick-addons-wrapper mb-3">
                 <input class="form-check-input mt-0" type="checkbox" id='onlineService'
                   aria-label="Checkbox for following text input">
@@ -178,15 +198,18 @@
               </div>
 
             </div>
-
-            <button type="button" class="btn btn-primary button-action">Go Back</button>
-            <button type="button" class="btn btn-primary button-action next">Next Step</button>
+            <div class='wizard-step-footer'>
+              <button type="button" class="button-secondary button-action">Go Back</button>
+              <button type="button" class="button-primary button-action next">Next Step</button>
+            </div>
           </section>
           <section class='wizard-step'>
-            <h2>Finishing up</h2>
-            <span>Double-check everything looks OK before confirming.</span>
+            <div class='wizard-step-header'>
+              <h2>Finishing up</h2>
+              <span>Double-check everything looks OK before confirming.</span>
+            </div>
 
-            <div>
+            <div class='wizard-step-content'>
               <table class="table">
                 <thead>
                   <tr>
@@ -250,9 +273,10 @@
                 </tfoot>
               </table>
             </div>
-
-            <button type="button" class="btn btn-primary button-action">Go Back</button>
-            <button type="button" class="btn btn-primary">Confirm</button>
+            <div class='wizard-step-footer'>
+              <button type="button" class="button-secondary button-action">Go Back</button>
+              <button type="button" class="button-confirm">Confirm</button>
+            </div>
           </section>
           <section class='wizard-step'>
             <div>
@@ -276,6 +300,7 @@
   <script>
     wizard.init();
     wizard.buttons();
+    wizard.validateForm()
   </script>
 </body>
 

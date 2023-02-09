@@ -9,7 +9,6 @@ var wizard = {
     buttons: function () {
         const button = [...document.getElementsByClassName("button-action")]
 
-        console.log("item")
         button.map(item => {
             item.addEventListener("click", function () {
 
@@ -36,11 +35,25 @@ var wizard = {
     },
     updateProgressbar: function () {
         progressSteps.forEach((progressStep, idx) => {
+            progressStep.classList.remove("active")
+
             if (idx < formStepsNum + 1) {
                 progressStep.classList.add("active")
-            } else {
-                progressStep.classList.remove("active")
             }
         });
     },
+    validateForm: function () {
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }
 }

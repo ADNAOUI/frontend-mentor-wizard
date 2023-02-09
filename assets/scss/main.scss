@@ -4,6 +4,9 @@
 @import './abstract/variables';
 
 // 2. Components
+@import './components/input',
+'./components/button';
 
 // 3. Views
-@import './views/wizard';
+@import './views/global',
+'./views/wizard';

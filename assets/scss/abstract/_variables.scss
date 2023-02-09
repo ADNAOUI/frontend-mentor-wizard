@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700");
 
 //Colors
-:root {
-    --primary: hsl(213, 96%, 18%);
-    --secondary: hsl(243, 100%, 62%);
-    --tertiary: hsl(228, 100%, 84%);
-    --light: hsl(206, 94%, 87%);
-    --dark: hsl(354, 84%, 57%);
-}
+$primary: hsl(213, 96%, 18%);
+$secondary: hsl(243, 100%, 62%);
+$tertiary: hsl(228, 100%, 84%);
+$light: hsl(206, 94%, 87%);
+$danger: hsl(354, 84%, 57%);
+$dark: hsl(231, 11%, 63%);
+$white: hsl(0, 0%, 100%);
 
 //Fonts
 $font-01: "Ubuntu",
@@ -20,3 +20,6 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1620px;
+
+//Images
+$base-url: '/assets/images/' !default;
